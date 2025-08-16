@@ -17,6 +17,7 @@ from module.File.EPUB import EPUB
 from module.File.KVJSON import KVJSON
 from module.File.MD import MD
 from module.File.MESSAGEJSON import MESSAGEJSON
+from module.File.PARATRANZJSON import PARATRANZJSON
 from module.File.RENPY import RENPY
 from module.File.SRT import SRT
 from module.File.TRANS.TRANS import TRANS
@@ -64,6 +65,7 @@ class FileManager(Base):
             items.extend(TRANS(self.config).read_from_path([path for path in paths if path.lower().endswith(".trans")]))
             items.extend(KVJSON(self.config).read_from_path([path for path in paths if path.lower().endswith(".json")]))
             items.extend(MESSAGEJSON(self.config).read_from_path([path for path in paths if path.lower().endswith(".json")]))
+            items.extend(PARATRANZJSON(self.config).read_from_path([path for path in paths if path.lower().endswith(".json")]))
         except Exception as e:
             self.error(f"{Localizer.get().log_read_file_fail}", e)
 

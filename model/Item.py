@@ -34,6 +34,7 @@ class Item():
         TRANS = "TRANS"                            # .trans Translator++
         KVJSON = "KVJSON"                          # .json MTool
         MESSAGEJSON = "MESSAGEJSON"                # .json SExtractor
+        PARATRANZJSON = "PARATRANZJSON"            # .json ParaTranz
 
     class TextType(StrEnum):
 
