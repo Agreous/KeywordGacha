@@ -57,7 +57,6 @@ class PARATRANZJSON(Base):
                     if not isinstance(entry, dict):
                         continue
                     
-                    key = entry.get("key")
                     original = entry.get("original")
                     translation = entry.get("translation")
 
